@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './App.css';
 
 const App = () => {
   const [topics, setTopics] = useState([]);
@@ -88,7 +89,7 @@ const App = () => {
           <div key={topic.id} className="topic">
             <h3>{topic.title}</h3>
             <p>{topic.content}</p>
-            <p>By: {topic.author}</p>
+            <p className="author">By: {topic.author}</p>
 
             {/* List Replies */}
             <div>
@@ -96,12 +97,18 @@ const App = () => {
               {topic.replies.map((reply) => (
                 <div key={reply.id} className="reply">
                   <p>{reply.content}</p>
-                  <p>By: {reply.author}</p>
+                  <p className="author">By: {reply.author}</p>
                 </div>
               ))}
 
               {/* Add Reply Form */}
-              <form onSubmit={(e) => { e.preventDefault(); handleAddReply(topic.id); }}>
+              <form
+                className="add-reply-form"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  handleAddReply(topic.id);
+                }}
+              >
                 <textarea
                   placeholder="Your Reply"
                   value={newReply.content}

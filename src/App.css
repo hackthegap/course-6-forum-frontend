@@ -1,40 +1,148 @@
-.App {
-  padding: 20px;
-  font-family: Arial, sans-serif;
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-form {
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #007bff;
   margin-bottom: 20px;
 }
 
-input, textarea {
-  display: block;
-  margin-bottom: 10px;
-  padding: 10px;
+/* Form Styles */
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+input,
+textarea {
   width: 100%;
-  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 button {
-  padding: 10px 20px;
   background-color: #007bff;
   color: white;
   border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
+/* Topic Styles */
 .topic {
-  border: 1px solid #ccc;
-  padding: 15px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 
+.topic h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.topic p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.topic .author {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Reply Styles */
 .reply {
   margin-left: 20px;
-  padding: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
   border-left: 3px solid #007bff;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.reply p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.reply .author {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Add Reply Form */
+.add-reply-form {
+  margin-top: 20px;
+}
+
+.add-reply-form textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.add-reply-form input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.add-reply-form button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-reply-form button:hover {
+  background-color: #218838;
 }
